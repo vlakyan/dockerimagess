@@ -54,7 +54,3 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && mv composer /usr/local/bin/composer
 
 WORKDIR /var/www
-
-CMD ["/usr/local/sbin/php-fpm"]
-
-EXPOSE 9000
