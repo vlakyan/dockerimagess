@@ -13,8 +13,6 @@ stages:
         - docker push $CI_REGISTRY_IMAGE/$IMAGE_NAME
     only:
         - master
-    tags:
-        - dind
     when: manual
 
 php7.2:
