@@ -1,5 +1,7 @@
 FROM php:7.2-fpm
 
+MAINTAINER Vitaly Losev <vitaly.losev93@gmail.com>
+
 RUN apt-get update && \
     apt-get install -y \
     zlib1g-dev \
