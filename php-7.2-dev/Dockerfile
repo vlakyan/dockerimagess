@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/mypie/docker-images/php7.2
+FROM registry.gitlab.com/mypie/docker-images/php-7.2:latest
 
 MAINTAINER Vitaly Losev <vitaly.losev93@gmail.com>
 
