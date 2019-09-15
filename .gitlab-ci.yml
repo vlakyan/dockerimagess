@@ -29,3 +29,8 @@ php7.2-dev:
     <<: *build_image
     variables:
         IMAGE_NAME: php-7.2-dev
+
+ci:
+    <<: *build_image
+    variables:
+        IMAGE_NAME: ci
