@@ -46,6 +46,7 @@ RUN docker-php-ext-install pdo \
     && docker-php-ext-enable xmlrpc \
     && docker-php-ext-enable zip \
     && docker-php-ext-enable bcmath \
+    && docker-php-ext-enable pcntl \
     && docker-php-ext-enable bz2 \
     && docker-php-ext-enable ssh2
 
