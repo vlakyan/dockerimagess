@@ -25,6 +25,7 @@ RUN docker-php-ext-install pdo \
     && docker-php-ext-install intl \
     && docker-php-ext-install gd \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
+    && docker-php-ext-configure pcntl --enable-pcntl \
     && docker-php-ext-install imap \
     && docker-php-ext-install xsl \
     && docker-php-ext-install xml \
@@ -34,6 +35,7 @@ RUN docker-php-ext-install pdo \
     && docker-php-ext-install zip \
     && docker-php-ext-install bcmath \
     && docker-php-ext-install bz2 \
+    && docker-php-ext-install pcntl \
     && docker-php-ext-enable intl \
     && docker-php-ext-enable gd \
     && docker-php-ext-enable imap \
