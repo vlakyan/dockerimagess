@@ -9,6 +9,8 @@ RUN apk add --no-cache \
     openssl-dev \
     gcc \
     libc-dev \
-    make
+    make \
+    curl \
+    bash
 
 RUN pip install docker-compose
