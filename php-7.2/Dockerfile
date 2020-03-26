@@ -26,6 +26,7 @@ RUN docker-php-ext-install pdo \
     && docker-php-ext-install gd \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
     && docker-php-ext-configure pcntl --enable-pcntl \
+    && docker-php-ext-configure opcache --enable-opcache \
     && docker-php-ext-install imap \
     && docker-php-ext-install xsl \
     && docker-php-ext-install xml \
@@ -36,6 +37,7 @@ RUN docker-php-ext-install pdo \
     && docker-php-ext-install bcmath \
     && docker-php-ext-install bz2 \
     && docker-php-ext-install pcntl \
+    && docker-php-ext-install opcache \
     && docker-php-ext-enable intl \
     && docker-php-ext-enable gd \
     && docker-php-ext-enable imap \
@@ -49,5 +51,8 @@ RUN docker-php-ext-install pdo \
     && docker-php-ext-enable pcntl \
     && docker-php-ext-enable bz2 \
     && docker-php-ext-enable ssh2
+
+COPY conf.d/docker-php-ext-opcache.ini /usr/local/etc/php/conf.d/
+RUN docker-php-ext-enable opcache
 
 WORKDIR /var/www
