@@ -30,6 +30,16 @@ php7.2-dev:
     variables:
         IMAGE_NAME: php-7.2-dev
 
+php7.4:
+    <<: *build_image
+    variables:
+        IMAGE_NAME: php-7.4
+
+php7.4-dev:
+    <<: *build_image
+    variables:
+        IMAGE_NAME: php-7.4-dev
+
 ci:
     <<: *build_image
     variables:
