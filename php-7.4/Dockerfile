@@ -16,8 +16,9 @@ RUN apt-get update && \
     libmemcached-dev \
     libzip-dev
 
-RUN pecl install ssh2-1.2 \
-    pecl install mcrypt-1.0.3
+RUN pecl install ssh2-1.2 && \
+    pecl install mcrypt-1.0.3 && \
+    pecl install redis-5.1.1
 
 RUN docker-php-ext-install pdo \
     && docker-php-ext-install pdo_mysql \
@@ -51,7 +52,8 @@ RUN docker-php-ext-install pdo \
     && docker-php-ext-enable bcmath \
     && docker-php-ext-enable pcntl \
     && docker-php-ext-enable bz2 \
-    && docker-php-ext-enable ssh2
+    && docker-php-ext-enable ssh2 \
+    && docker-php-ext-enable redis
 
 COPY conf.d/docker-php-ext-opcache.ini /usr/local/etc/php/conf.d/
 RUN docker-php-ext-enable opcache
