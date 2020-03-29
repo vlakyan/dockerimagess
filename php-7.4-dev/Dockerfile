@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 RUN pecl install xdebug
 
 COPY conf.d/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/
-COPY conf.d/docker-php-ext-memlimit.ini /usr/local/etc/php/conf.d/
+COPY conf.d/docker-php-ext-general.ini /usr/local/etc/php/conf.d/
 COPY conf.d/docker-php-ext-opcache.ini /usr/local/etc/php/conf.d/
 
 RUN docker-php-ext-enable opcache \
