@@ -20,6 +20,16 @@ variables:
         - master
     when: manual
 
+php7.1:
+    <<: *build_image
+    variables:
+        IMAGE_NAME: php-7.1
+
+php7.1-dev:
+    <<: *build_image
+    variables:
+        IMAGE_NAME: php-7.1-dev
+
 php7.2:
     <<: *build_image
     variables:
